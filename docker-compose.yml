@@ -1,0 +1,57 @@
+version: '3.7'
+
+services:
+    my-wpdb:
+        command: '--default-authentication-plugin=mysql_native_password'
+        container_name: mysql
+        image: mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: d33pmag1cS
+            MYSQL_DATABASE: wordpress
+            MYSQL_USER: piper
+            MYSQL_PASSWORD: p1p3rbabE
+        restart: always
+        networks: 
+            - wordpress-network
+        volumes:
+            - db_data:/var/lib/mysql
+
+    my-wp:
+        container_name: wordpress
+        hostname: wordpress.local
+        image: wordpress:latest
+        volumes:
+            - wordpress_files:/var/www/html
+        ports:
+            - "80:80"
+        links:
+            - my-wpdb:mysql
+        environment:
+            WORDPRESS_DB_HOST: my-wpdb:3306
+            WORDPRESS_DB_NAME: wordpress
+            WORDPRESS_DB_USER: piper
+            WORDPRESS_DB_PASSWORD: p1p3rbabE
+        restart: always
+        depends_on:
+            - my-wpdb
+        networks: 
+            - wordpress-network
+
+    phpmyadmin:
+        hostname: phpmyadmin.local
+        container_name: phpmyadmin
+        image: phpmyadmin/phpmyadmin:latest
+        ports:
+            - 127.0.0.1:8081:80
+        links:
+            - my-wpdb:db
+        networks: 
+            - wordpress-network
+
+networks:
+    wordpress-network:
+        driver: bridge
+
+volumes:
+    wordpress_files:
+    db_data:
