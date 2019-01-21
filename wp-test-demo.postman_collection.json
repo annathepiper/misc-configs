@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "2851a17e-d823-4952-8eeb-534e7f16eeba",
+		"name": "Wordpress Test Demo",
+		"description": "Endpoints for my Wordpress test demo project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://wordpress.local/wp-json/wp/v2/posts",
+					"protocol": "http",
+					"host": [
+						"wordpress",
+						"local"
+					],
+					"path": [
+						"wp-json",
+						"wp",
+						"v2",
+						"posts"
+					]
+				},
+				"description": "Get a JSON array of posts"
+			},
+			"response": []
+		}
+	]
+}
