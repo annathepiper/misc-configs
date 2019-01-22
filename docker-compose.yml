@@ -6,10 +6,10 @@ services:
         container_name: mysql
         image: mysql
         environment:
-            MYSQL_ROOT_PASSWORD: d33pmag1cS
+            MYSQL_ROOT_PASSWORD: KL.JKK&!922
             MYSQL_DATABASE: wordpress
-            MYSQL_USER: piper
-            MYSQL_PASSWORD: p1p3rbabE
+            MYSQL_USER: wp-user
+            MYSQL_PASSWORD: 090sdfsfSOI.WER@!
         restart: always
         networks: 
             - wordpress-network
@@ -29,8 +29,8 @@ services:
         environment:
             WORDPRESS_DB_HOST: my-wpdb:3306
             WORDPRESS_DB_NAME: wordpress
-            WORDPRESS_DB_USER: piper
-            WORDPRESS_DB_PASSWORD: p1p3rbabE
+            WORDPRESS_DB_USER: wp-user
+            WORDPRESS_DB_PASSWORD: 090sdfsfSOI.WER@!
         restart: always
         depends_on:
             - my-wpdb
