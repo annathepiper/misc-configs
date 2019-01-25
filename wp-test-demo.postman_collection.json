@@ -2,64 +2,400 @@
 	"info": {
 		"_postman_id": "2851a17e-d823-4952-8eeb-534e7f16eeba",
 		"name": "Wordpress Test Demo",
-		"description": "Endpoints for my Wordpress test demo project",
+		"description": "Endpoints for my Wordpress test demo project. Works in tandem with a Wordpress Local environment to set assorted variables for the endpoint URLs.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Get Posts",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+			"name": "GET Requests",
+			"item": [
+				{
+					"name": "Get Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/posts",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"posts"
+							]
+						},
+						"description": "Get a JSON array of all posts on the site"
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://wordpress.local/wp-json/wp/v2/posts",
-					"protocol": "http",
-					"host": [
-						"wordpress",
-						"local"
-					],
-					"path": [
-						"wp-json",
-						"wp",
-						"v2",
-						"posts"
-					]
+				{
+					"name": "Get Post by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/posts/{{postId}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"posts",
+								"{{postId}}"
+							]
+						},
+						"description": "Get a post by the specified post ID number"
+					},
+					"response": []
 				},
-				"description": "Get a JSON array of posts"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Post by Id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
+				{
+					"name": "Get Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/categories",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"categories"
+							]
+						},
+						"description": "Get a JSON array of all categories on the site"
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://wordpress.local/wp-json/wp/v2/posts/{{postId}}",
-					"protocol": "http",
-					"host": [
-						"wordpress",
-						"local"
-					],
-					"path": [
-						"wp-json",
-						"wp",
-						"v2",
-						"posts",
-						"{{postId}}"
-					]
+				{
+					"name": "Get Category by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/categories/{{categoryId}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"categories",
+								"{{categoryId}}"
+							]
+						},
+						"description": "Get a category specified by its ID number"
+					},
+					"response": []
 				},
-				"description": "Get a post by the specified post ID number"
-			},
-			"response": []
+				{
+					"name": "Get Tags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/tags",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"tags"
+							]
+						},
+						"description": "Get a JSON array of all tags on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tag by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/tags/{{tagId}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"tags",
+								"{{tagId}}"
+							]
+						},
+						"description": "Get a specific tag by its ID number"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/pages",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"pages"
+							]
+						},
+						"description": "Get a JSON array of all pages on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Page by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/pages/{{pageId}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"pages",
+								"{{pageId}}"
+							]
+						},
+						"description": "Get a page by the specified page ID number"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/comments",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"comments"
+							]
+						},
+						"description": "Get a JSON array of all comments on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Comment by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/comments/{{commentId}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"comments",
+								"{{commentId}}"
+							]
+						},
+						"description": "Get a comment by the specified comment ID number"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Taxonomies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/taxonomies",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"taxonomies"
+							]
+						},
+						"description": "Get a JSON array of all taxonomies on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Taxonomy by Tag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/taxonomies/{{taxonomyTag}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"taxonomies",
+								"{{taxonomyTag}}"
+							]
+						},
+						"description": "Get a specific taxonomy by identifying tag string"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Media",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/media",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"media"
+							]
+						},
+						"description": "Get a JSON array of all media items on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Media by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/media/{{mediaId}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"media",
+								"{{mediaId}}"
+							]
+						},
+						"description": "Get a specific media item by its ID number"
+					},
+					"response": []
+				}
+			],
+			"description": "These are assorted GET requests that retrieve publicly viewable data about the test Wordpress site you're working with."
 		},
 		{
 			"name": "Create a Post",
@@ -94,170 +430,28 @@
 				"description": "Get a JSON array of posts"
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "67706c51-f6f9-4b37-bca1-45d1dea5bd7e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		},
 		{
-			"name": "Get Categories",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://wordpress.local/wp-json/wp/v2/posts",
-					"protocol": "http",
-					"host": [
-						"wordpress",
-						"local"
-					],
-					"path": [
-						"wp-json",
-						"wp",
-						"v2",
-						"posts"
-					]
-				},
-				"description": "Get a JSON array of posts"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Tags",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://wordpress.local/wp-json/wp/v2/posts",
-					"protocol": "http",
-					"host": [
-						"wordpress",
-						"local"
-					],
-					"path": [
-						"wp-json",
-						"wp",
-						"v2",
-						"posts"
-					]
-				},
-				"description": "Get a JSON array of posts"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Pages",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://wordpress.local/wp-json/wp/v2/pages",
-					"protocol": "http",
-					"host": [
-						"wordpress",
-						"local"
-					],
-					"path": [
-						"wp-json",
-						"wp",
-						"v2",
-						"pages"
-					]
-				},
-				"description": "Get a JSON array of posts"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Page by Id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://wordpress.local/wp-json/wp/v2/pages/{{pageId}}",
-					"protocol": "http",
-					"host": [
-						"wordpress",
-						"local"
-					],
-					"path": [
-						"wp-json",
-						"wp",
-						"v2",
-						"pages",
-						"{{pageId}}"
-					]
-				},
-				"description": "Get a post by the specified post ID number"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Comments",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://wordpress.local/wp-json/wp/v2/pages",
-					"protocol": "http",
-					"host": [
-						"wordpress",
-						"local"
-					],
-					"path": [
-						"wp-json",
-						"wp",
-						"v2",
-						"pages"
-					]
-				},
-				"description": "Get a JSON array of posts"
-			},
-			"response": []
-		},
-		{
-			"name": "Get Comment by Id",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://wordpress.local/wp-json/wp/v2/comments/{{commentId}}",
-					"protocol": "http",
-					"host": [
-						"wordpress",
-						"local"
-					],
-					"path": [
-						"wp-json",
-						"wp",
-						"v2",
-						"comments",
-						"{{commentId}}"
-					]
-				},
-				"description": "Get a post by the specified post ID number"
-			},
-			"response": []
+			"listen": "test",
+			"script": {
+				"id": "6a08251f-67cc-47b1-b551-647facc08323",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
