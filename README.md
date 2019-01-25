@@ -6,3 +6,6 @@ For my wp-test-demo-java repo, I'm using Docker to run local Wordpress and MySQL
 
 ## Postman Collection
 The file wp-test-demo.postman_collection.json is a Postman collection containing various service endpoints for Wordpress, used in the test suite in my wp-test-demo-java repo. The collection assumes you've got a local test install of Wordpress using the URL wordpress.local.
+
+## Postman Environment
+The file wp-local.postman_environment.json is a Postman Environment to go with the collection above. It holds the current values I'm using for testing purposes to plug into the URLs. Edit as necessary to test other datasets.
