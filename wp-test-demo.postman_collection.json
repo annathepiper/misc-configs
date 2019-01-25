@@ -393,6 +393,115 @@
 						"description": "Get a specific media item by its ID number"
 					},
 					"response": []
+				},
+				{
+					"name": "Get Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/users",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"users"
+							]
+						},
+						"description": "Get a JSON array of all media items on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/users/{{userId}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"users",
+								"{{userId}}"
+							]
+						},
+						"description": "Get a specific media item by its ID number"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post Types",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/types",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"types"
+							]
+						},
+						"description": "Get a JSON array of all posts on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post Type by Tag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/types",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"types"
+							]
+						},
+						"description": "Get a JSON array of all posts on the site"
+					},
+					"response": []
 				}
 			],
 			"description": "These are assorted GET requests that retrieve publicly viewable data about the test Wordpress site you're working with."
