@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "2851a17e-d823-4952-8eeb-534e7f16eeba",
+		"_postman_id": "28b14766-dc61-46fb-9a29-6851a859c4fd",
 		"name": "Wordpress Test Demo",
 		"description": "Endpoints for my Wordpress test demo project. Works in tandem with a Wordpress Local environment to set assorted variables for the endpoint URLs.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
@@ -486,7 +486,7 @@
 							"raw": ""
 						},
 						"url": {
-							"raw": "http://wordpress.local/wp-json/wp/v2/types",
+							"raw": "http://wordpress.local/wp-json/wp/v2/types/{{postTag}}",
 							"protocol": "http",
 							"host": [
 								"wordpress",
@@ -496,7 +496,89 @@
 								"wp-json",
 								"wp",
 								"v2",
-								"types"
+								"types",
+								"{{postTag}}"
+							]
+						},
+						"description": "Get a JSON array of all posts on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post Statuses",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/statuses",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"statuses"
+							]
+						},
+						"description": "Get a JSON array of all posts on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Post Status by Tag",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/{{postStatus}}",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"{{postStatus}}"
+							]
+						},
+						"description": "Get a JSON array of all posts on the site"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Settings",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://wordpress.local/wp-json/wp/v2/settings",
+							"protocol": "http",
+							"host": [
+								"wordpress",
+								"local"
+							],
+							"path": [
+								"wp-json",
+								"wp",
+								"v2",
+								"settings"
 							]
 						},
 						"description": "Get a JSON array of all posts on the site"
