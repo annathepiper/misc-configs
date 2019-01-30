@@ -51,6 +51,7 @@ services:
 networks:
     wordpress-network:
         driver: bridge
+        name: wp-net
 
 volumes:
     wordpress_files:
