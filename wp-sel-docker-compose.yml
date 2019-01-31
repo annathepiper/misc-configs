@@ -17,7 +17,7 @@ services:
             - db_data:/var/lib/mysql
 
     my-wp:
-        container_name: wordpress
+        container_name: wordpress.local
         hostname: wordpress.local
         image: wordpress:latest
         volumes:
